@@ -1,4 +1,11 @@
-helloworld
-iowejfihjwe
+Task ditribution
+- 3 person home
+-- 1 ranking page/leaderboard (ilham)
+-- 1 display game / login (sofea)
+-- 1 register ( shafwan)
 
-hi im ismail faruqi --ismailfaruqi._
+
+- 1 person admin (ismail)
+-- create GUI to key in 
+1) result game 
+2) etc

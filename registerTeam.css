@@ -1,5 +1,62 @@
-*{
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-image: url(backgroundesukad.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    max-width: 700px !important;
+    width: 100% !important;
+    background-color: #4A1744;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #F4841E;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+.form-control, .form-select {
+    background-color: #ffffff;
+    border: 2px solid #F4841E;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #ff5733;
+    box-shadow: 0 0 4px #ff5733;
+}
+
+.input-group-text {
+    background-color: #ff5733;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #F4841E;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #c44229;
+}
+
+.btn-secondary {
+    background-color: #F4841E;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #ff5733;
+}
+.hidden {
+    display: none;
 }

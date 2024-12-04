@@ -1,6 +1,6 @@
 var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
-    grabCursor: true,
+    grabCursor: false, // Disable cursor grabbing
     centeredSlides: true,
     loop: true,
     slidesPerView: 'auto',
@@ -17,5 +17,6 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    }
+    },
+    allowTouchMove: false, // Disable all touch-based sliding/swiping
 });

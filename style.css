@@ -23,7 +23,7 @@ body {
     font-size: medium;
 }
 
-.login-button {
+.btn-primary {
     background-color: #F4841E;
     color: #fff;
     font-size: 14px;
@@ -207,6 +207,7 @@ html {
     height: 42rem;
     border-radius: 2rem;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .tranding-slide .tranding-slide-content {
@@ -228,7 +229,14 @@ html {
     position: absolute;
     bottom: 2rem;
     left: 2rem;
-    color: var(--white);
+    color: white;
+    -webkit-text-stroke: 1.2px black;
+    font-weight: bold;
+    text-shadow:
+    -1px -1px 0 black,  /* Top-left shadow */
+    1px -1px 0 black,   /* Top-right shadow */
+    -1px 1px 0 black,   /* Bottom-left shadow */
+    1px 1px 0 black;
 }
 
 .swiper-slide-shadow-left,
@@ -238,7 +246,7 @@ html {
 
 .tranding-slider-control {
     position: relative;
-    bottom: -1rem;
+    bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,4 +316,34 @@ html {
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--primary);
+}
+
+.swiper tranding-slider {
+    margin-bottom: 70px;
+}
+
+.leaderboard-button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #F4841E;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.leaderboard-button:hover {
+    background-color: orange;
+}
+
+form {
+    width: 24%;
+    margin: auto;
+    padding-top: 150px;
+}
+
+.bg {
+    background-color: beige;
 }

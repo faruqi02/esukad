@@ -294,5 +294,8 @@
 }
 
 .list-group-item {
+    /* display: flex; */
     background-color: transparent;
+    /* align-items: center;
+    text-align: center; */
 }

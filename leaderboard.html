@@ -16,12 +16,13 @@
     <!-- <img src="img\backgroundesukad.JPEG" alt="" class="img-fluid"> -->
     
     <div class="hero-section">
-        <div id="navbar"></div>
+        
 
         <div class="container">
-            <div class="row">
+            <div id="navbar"></div>
+            <div class="row mt-2">
                 <div class="col-md-5">
-                    <div class="card-body text-center mt-5"><div class="dashboard-header">LEADERBOARD</div>
+                    <div class="card-body text-center"><div class="dashboard-header">LEADERBOARD</div>
                         <ul class="list-group">
                             <!-- <div class="leaderboard border-0 my-2 rounded">
                                 <ul class="list-group list-group-horizontal justify-content-center">
@@ -91,7 +92,7 @@
                 </div>
 
                 <div class="col-md-7">
-                    <div class="card-body text-center mt-5"><div class="dashboard-header">UPCOMING MATCH</div>
+                    <div class="card-body text-center"><div class="dashboard-header">UPCOMING MATCH</div>
                         <div class="match-box list-group list-group-horizontal justify-content-center my-2">
                             <!-- <li class="list-group-item border-0">restu</li>
                             <li class="list-group-item border-0">vs</li>
@@ -173,7 +174,15 @@
         </div>
     </div>
     
-    
+    <!-- fetch navbar -->
+    <!-- <script>
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading navbar:', error));
+      </script> -->
 
     <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 

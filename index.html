@@ -40,7 +40,7 @@
           </li>
       </div>
     </div>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Login
+    <button type="button" class="btn btn-primary" id="openModal"ata-bs-toggle="modal" data-bs-target="#exampleModal"> Login
     </button>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
       aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -113,34 +113,29 @@
   <!--End of responsive slider-->
   <!-- Button trigger modal -->
 
-
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <!-- Vertically centered modal -->
-    <div class="modal-dialog modal-dialog-centered">
-      <form class="form-group">
-        <div class="mb-3 bg p-5 rounded">
-          <h2 class="text-center">Login</h2>
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close-btn">&times;</span>
+      <form class="form-group futuristic-form" style="text-align: center;">
+        <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52" style="margin-bottom: 10px;">
+        <div class="mb-3">
+          <input type="email" class="futuristic-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" class="futuristic-input" id="exampleInputPassword1" placeholder="Password">
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="futuristic-btn">Submit</button>
       </form>
     </div>
+  </div>
 
-    <!--Swiper-->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-    </body>
+  <!--Swiper-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  
+  </body>
 
 </html>

@@ -11,9 +11,35 @@
         <link rel="stylesheet" href="style.css">
       </head>
 <body>
-    <div class="hero-section">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="#">
+            <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52">
+        </a>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">e-Sukad</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Games</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+                </li>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!--End Navbar-->
         <div class="container">
-            <div id="navbar"></div>
             <div class="row mt-2">
                 <div class="col-md-5">
                     <div class="card-body text-center"><div class="dashboard-header">LEADERBOARD</div>
@@ -135,10 +161,10 @@
                             <div class="history border-0 rounded my-2">
                                 <!-- <div class="row border rounded"> -->
                                     <ul class="list-group list-group-horizontal justify-content-center my-1">
-                                        <li class="list-group-item history-text border-0 col-md-3">restu</li>
+                                        <li class="list-group-item history-text border-0 col-md-3">restu cahaya</li>
                                         <li class="list-group-item vs-text border-0 vs-text mx-auto">vs</li>
                                         <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-3">cahaya gemilang</li>
-                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">restu</li>
+                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">restu cahaya</li>
                                         <li class="list-group-item history-score border-end-0 border-top-0 border-bottom-0 col-md-2">+400</li>
                                     </ul>
                                 <!-- </div> -->
@@ -154,10 +180,10 @@
                             </div>
                             <div class="history border-0 rounded my-2">
                                     <ul class="list-group list-group-horizontal justify-content-center my-1">
-                                        <li class="list-group-item history-text border-0 col-md-3 ">restu</li>
+                                        <li class="list-group-item history-text border-0 col-md-3 ">restu cahaya</li>
                                         <li class="list-group-item vs-text border-0 vs-text mx-auto">vs</li>
-                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-3">tekun</li>
-                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">restu</li>
+                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-3">tekun gemilang</li>
+                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">restu cahaya</li>
                                         <li class="list-group-item history-score border-end-0 border-top-0 border-bottom-0 col-md-2">+400</li>
                                     </ul>
                             </div>
@@ -166,17 +192,16 @@
                 </div>
             </div>
         </div>
-    </div>
     
     <!-- fetch navbar -->
-    <script>
+    <!-- <script>
         fetch('navbar.html')
           .then(response => response.text())
           .then(data => {
             document.getElementById('navbar').innerHTML = data;
           })
           .catch(error => console.error('Error loading navbar:', error));
-      </script>
+      </script> -->
 
     <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 

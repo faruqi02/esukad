@@ -46,7 +46,7 @@
               </li>
           </div>
         </div>
-        <button type="button" class="btn btn-primary" id="openModal" ata-bs-toggle="modal"
+        <button type="button" class="btn btn-primary" id="openModal" data-bs-toggle="modal"
           data-bs-target="#exampleModal">
           Login
         </button>
@@ -125,14 +125,14 @@
   <div id="modal" class="modal">
     <div class="modal-content">
       <span id="closeModal" class="close-btn">&times;</span>
-      <form class="form-group login-form" style="text-align: center;">
+      <form id="loginForm" class="form-group login-form" style="text-align: center;">
         <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52" style="margin-bottom: 10px;">
         <div class="mb-3">
-          <input type="email" class="login-input" id="exampleInputEmail1" aria-describedby="emailHelp"
+          <input type="email" class="login-input" id="emailInput" aria-describedby="emailHelp"
             placeholder="Email address">
         </div>
         <div class="mb-3">
-          <input type="password" class="login-input" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" class="login-input" id="passwordInput" placeholder="Password">
         </div>
         <button type="submit" class="login-btn">Login</button>
       </form>

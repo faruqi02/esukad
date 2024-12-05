@@ -42,3 +42,20 @@ window.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
+// Login form validation
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent default form submission
+
+  const email = document.getElementById('emailInput').value;
+  const password = document.getElementById('passwordInput').value;
+
+  // Validate credentials
+  if (email === 'manager1@gmail.com' && password === '00000') {
+    // Redirect to registerTeam.html
+    window.location.href = 'registerTeam.html';
+  } else {
+    // Show an error message
+    alert('Invalid email or password. Please try again.');
+  }
+});

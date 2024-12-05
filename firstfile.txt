@@ -9,3 +9,9 @@ Task ditribution
 -- create GUI to key in 
 1) result game 
 2) etc
+
+Remaining Task
+- ilham ( add navigation bar)
+- sofea ( done )
+- shafwan ( href to leaderboard page when click "register team")
+- ismail (read and write data from and to csv -> display in table form in dashboard canvas)

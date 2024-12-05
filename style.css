@@ -18,6 +18,7 @@ body {
 .navbar {
     background-color: #4a1744;
     height: 80px;
+    margin-top: 80px;
     margin-left: 90px;
     margin-right: 90px;
     margin-bottom: 30px;
@@ -456,7 +457,7 @@ html {
   
   /* About Section */
   #about {
-    background: linear-gradient(to bottom right, #6f42c1, #f3f4f7);
+    background-color: #1C191E;
     color: #fff;
     width: 100%;
   }

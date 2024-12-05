@@ -35,10 +35,13 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Annoucement</a>
+              <a class="nav-link" href="#announcement">Annoucement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
             </li>
         </div>
       </div>
@@ -113,6 +116,7 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+  </div>
     <!--End of responsive slider-->
     <!-- Button trigger modal -->
 
@@ -133,7 +137,48 @@
         </form>
       </div>
     </div>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="about-container">
+        <h2>About e-Sukad</h2>
+        <p>
+            e-Sukad is a platform for organizing e-Sport tournaments between student dormitories. It provides
+            registration, match statistics, and leaderboards to enhance the gaming experience.
+        </p>
+    </div>
+</section>
 
+<!-- Announcement Section -->
+<section id="announcement" class="section bg-light">
+    <div class="announcement-container">
+        <h2>Announcements</h2>
+        <ul>
+            <li>Registration for the Mobile Legends tournament closes on [date].</li>
+            <li>Next PUBG tournament starts on [date].</li>
+            <li>Join our Valorant training sessions every Friday.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="section">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="#" method="post" class="contact-form">
+            <div class="mb-3">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+                <textarea name="message" class="form-control" rows="4" placeholder="Your Message"
+                    required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
     <!--Swiper-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

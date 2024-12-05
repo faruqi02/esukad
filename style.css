@@ -3,12 +3,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -416,6 +417,120 @@ html {
     color: #ffffff;
   }
 
+  /* General Section Styles */
+.section {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  
+  .section.bg-light {
+    background-color: #f9f9f9;
+    color: #333;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* About Section */
+  #about {
+    background: linear-gradient(to bottom right, #6f42c1, #f3f4f7);
+    color: #fff;
+    width: 100%;
+  }
+  
+  #about p {
+    font-size: 1.2rem;
+    color: #eee;
+    margin: 0 auto;
+  }
+  
+  /* Announcement Section */
+  #announcement {
+    width: 100%;
+  }
+  #announcement ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #announcement ul li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #announcement ul li:last-child {
+    border-bottom: none;
+  }
+  
+  #announcement ul li:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  /* Contact Us Section */
+  #contact {
+    background: #6c757d;
+    color: #fff;
+    width: 100%;
+  }
+  
+  #contact .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  #contact .contact-form .form-control {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  #contact .contact-form .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  #contact .contact-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  #contact .contact-form button:hover {
+    background: #218838;
+  }
 
   /* leaderboard.css ------------- */
   

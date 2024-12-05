@@ -372,25 +372,18 @@ html {
   }
   
   /* Form Styles */
-  .futuristic-form {
+  .login-form {
     color: #dff9fb;
   }
   
-  .futuristic-title {
+  .login-title {
     color: #ffffff;
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-  .futuristic-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .futuristic-input {
+  .login-input {
     width: 100%;
     padding: 10px;
     margin-bottom: 5px;
@@ -400,11 +393,11 @@ html {
     font-size: 14px;
   }
   
-  .futuristic-input:focus {
+  .login-input:focus {
     outline: none;
   }
   
-  .futuristic-btn {
+  .login-btn {
     background-color: #F4841E;
     font-size: 14px;
     color: #ffffff;
@@ -418,7 +411,7 @@ html {
     margin-bottom: 10px;
   }
   
-  .futuristic-btn:hover {
+  .login-btn:hover {
     background-color: orange;
     color: #ffffff;
   }

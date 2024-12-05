@@ -17,173 +17,174 @@
 <!--Navbar-->
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand me-auto" href="index.html">
-        <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52">
-      </a>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">e-Sukad</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
+  <section id="home-section" class="home-section">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="index.html">
+          <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52">
+        </a>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">e-Sukad</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#announcement">Annoucement</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+          </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#announcement">Annoucement</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact Us</a>
-            </li>
-        </div>
+        <button type="button" class="btn btn-primary" id="openModal" ata-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+          Login
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-      <button type="button" class="btn btn-primary" id="openModal" ata-bs-toggle="modal" data-bs-target="#exampleModal">
-        Login
-      </button>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    </nav>
+    <!--End Navbar-->
+    <!-- Picture between navbar and slider -->
+    <div class="banner-container">
+      <img src="img/nameesukad.PNG" alt="Banner Image" class="img-fluid" />
     </div>
-  </nav>
-  <!--End Navbar-->
-  <!-- Picture between navbar and slider -->
-  <div class="banner-container">
-    <img src="img/nameesukad.PNG" alt="Banner Image" class="img-fluid" />
-  </div>
-  <!--Responsive slider-->
-  <div class="container">
-    <div class="swiper tranding-slider">
-      <div class="swiper-wrapper">
-        <!-- Slide-start -->
-        <div class="swiper-slide tranding-slide">
-          <div class="tranding-slide-img">
-            <img src="img/mobilelegendgame.jpg" alt="Tranding">
-          </div>
-          <div class="tranding-slide-content">
-            <div class="tranding-slide-content-bottom">
-              <h2 class="food-name"> Mobile Legend: Bang Bang </h2>
-              <button class="leaderboard-button" onclick="location.href='leaderboardML.html'">View game</button>
-            </div>
-          </div>
-        </div>
-        <!-- Slide-end -->
-        <!-- Slide-start -->
-        <div class="swiper-slide tranding-slide">
-          <a href="leaderboard.html">
+    <!--Responsive slider-->
+    <div class="container">
+      <div class="swiper tranding-slider">
+        <div class="swiper-wrapper">
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
             <div class="tranding-slide-img">
-              <img src="img/pubggame.png" alt="Tranding">
+              <img src="img/mobilelegendgame.jpg" alt="Tranding">
             </div>
-          </a>
-          <div class="tranding-slide-content">
-            <div class="tranding-slide-content-bottom">
-              <h2 class="food-name"> PUBG Mobile </h2>
-              <button class="leaderboard-button" onclick="location.href='leaderboardPUBG.html'">View game</button>
+            <div class="tranding-slide-content">
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name"> Mobile Legend: Bang Bang </h2>
+                <button class="leaderboard-button" onclick="location.href='leaderboardML.html'">View game</button>
+              </div>
             </div>
           </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <a href="leaderboard.html">
+              <div class="tranding-slide-img">
+                <img src="img/pubggame.png" alt="Tranding">
+              </div>
+            </a>
+            <div class="tranding-slide-content">
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name"> PUBG Mobile </h2>
+                <button class="leaderboard-button" onclick="location.href='leaderboardPUBG.html'">View game</button>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="img/valorantgame.png" alt="valorant">
+            </div>
+            <div class="tranding-slide-content">
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name"> Valorant </h2>
+                <button class="leaderboard-button" onclick="location.href='leaderboardVALO.html'">View game</button>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
         </div>
-        <!-- Slide-end -->
-        <!-- Slide-start -->
-        <div class="swiper-slide tranding-slide">
-          <div class="tranding-slide-img">
-            <img src="img/valorantgame.png" alt="valorant">
-          </div>
-          <div class="tranding-slide-content">
-            <div class="tranding-slide-content-bottom">
-              <h2 class="food-name"> Valorant </h2>
-              <button class="leaderboard-button" onclick="location.href='leaderboardVALO.html'">View game</button>
-            </div>
-          </div>
-        </div>
-        <!-- Slide-end -->
-      </div>
 
-      <div class="tranding-slider-control my-5">
-        <div class="swiper-button-prev slider-arrow">
-          <ion-icon name="arrow-back-outline"></ion-icon>
+        <div class="tranding-slider-control my-5">
+          <div class="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div class="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-button-next slider-arrow">
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-        <div class="swiper-pagination"></div>
       </div>
+    </div>
+    <!--End of responsive slider-->
+  </section>
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close-btn">&times;</span>
+      <form class="form-group login-form" style="text-align: center;">
+        <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52" style="margin-bottom: 10px;">
+        <div class="mb-3">
+          <input type="email" class="login-input" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Email address">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="login-input" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
     </div>
   </div>
-    <!--End of responsive slider-->
-    <!-- Button trigger modal -->
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span id="closeModal" class="close-btn">&times;</span>
-        <form class="form-group login-form" style="text-align: center;">
-          <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52" style="margin-bottom: 10px;">
-          <div class="mb-3">
-            <input type="email" class="login-input" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="Email address">
-          </div>
-          <div class="mb-3">
-            <input type="password" class="login-input" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <button type="submit" class="login-btn">Login</button>
-        </form>
-      </div>
-    </div>
   <!-- About Section -->
   <section id="about" class="section">
     <div class="about-container">
-        <h2>About e-Sukad</h2>
-        <p>
-            e-Sukad is a platform for organizing e-Sport tournaments between student dormitories. It provides
-            registration, match statistics, and leaderboards to enhance the gaming experience.
-        </p>
+      <h2>About e-Sukad</h2>
+      <p>
+        e-Sukad is a platform for organizing e-Sport tournaments between student dormitories. It provides
+        registration, match statistics, and leaderboards to enhance the gaming experience.
+      </p>
     </div>
-</section>
+  </section>
 
-<!-- Announcement Section -->
-<section id="announcement" class="section bg-light">
+  <!-- Announcement Section -->
+  <section id="announcement" class="section bg-light">
     <div class="announcement-container">
-        <h2>Announcements</h2>
-        <ul>
-            <li>Registration for the Mobile Legends tournament closes on [date].</li>
-            <li>Next PUBG tournament starts on [date].</li>
-            <li>Join our Valorant training sessions every Friday.</li>
-        </ul>
+      <h2>Announcements</h2>
+      <ul>
+        <li>Registration for the Mobile Legends tournament closes on [date].</li>
+        <li>Next PUBG tournament starts on [date].</li>
+        <li>Join our Valorant training sessions every Friday.</li>
+      </ul>
     </div>
-</section>
+  </section>
 
-<!-- Contact Us Section -->
-<section id="contact" class="section">
+  <!-- Contact Us Section -->
+  <section id="contact" class="section">
     <div class="contact-container">
-        <h2>Contact Us</h2>
-        <form action="#" method="post" class="contact-form">
-            <div class="mb-3">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="mb-3">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="mb-3">
-                <textarea name="message" class="form-control" rows="4" placeholder="Your Message"
-                    required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+      <h2>Contact Us</h2>
+      <form action="#" method="post" class="contact-form">
+        <div class="mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
     </div>
-</section>
-    <!--Swiper-->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+  </section>
+  <!--Swiper-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 
 </body>
 

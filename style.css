@@ -1,8 +1,4 @@
 body {
-    background-image: url('img/backgroundesukad.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,6 +6,13 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+}
+
+#home-section {
+    background-image: url('img/backgroundesukad.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .navbar {

@@ -35,6 +35,7 @@
                             aria-label="Close"></button>
                     </div>
                 </div>
+                <button type="button" class="btn btn-primary" id="signOut">Sign Out</button>
             </div>
         </nav>
         <!--End Navbar-->
@@ -55,7 +56,8 @@
                             <label class="visually-hidden" for="player1IGN">Username</label>
                             <div class="input-group">
                                 <div class="input-group-text">IGN</div>
-                                <input type="text" class="form-control" id="player1IGN" placeholder="Enter IGN" required>
+                                <input type="text" class="form-control" id="player1IGN" placeholder="Enter IGN"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-3 text-center mt-3">
@@ -79,7 +81,8 @@
                             <label class="visually-hidden" for="player2IGN">Username</label>
                             <div class="input-group">
                                 <div class="input-group-text">IGN</div>
-                                <input type="text" class="form-control" id="player2IGN" placeholder="Enter IGN" required>
+                                <input type="text" class="form-control" id="player2IGN" placeholder="Enter IGN"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-3 text-center mt-3">
@@ -103,7 +106,8 @@
                             <label class="visually-hidden" for="player3IGN">Username</label>
                             <div class="input-group">
                                 <div class="input-group-text">IGN</div>
-                                <input type="text" class="form-control" id="player3IGN" placeholder="Enter IGN" required>
+                                <input type="text" class="form-control" id="player3IGN" placeholder="Enter IGN"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-3 text-center mt-3">
@@ -127,7 +131,8 @@
                             <label class="visually-hidden" for="player4IGN">Username</label>
                             <div class="input-group">
                                 <div class="input-group-text">IGN</div>
-                                <input type="text" class="form-control" id="player4IGN" placeholder="Enter IGN" required>
+                                <input type="text" class="form-control" id="player4IGN" placeholder="Enter IGN"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-3 text-center mt-3">
@@ -151,7 +156,8 @@
                             <label class="visually-hidden" for="player5IGN">Username</label>
                             <div class="input-group">
                                 <div class="input-group-text">IGN</div>
-                                <input type="text" class="form-control" id="player5IGN" placeholder="Enter IGN" required>
+                                <input type="text" class="form-control" id="player5IGN" placeholder="Enter IGN"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-3 text-center mt-3">
@@ -175,7 +181,8 @@
                             <label class="visually-hidden" for="player6IGN">Username</label>
                             <div class="input-group">
                                 <div class="input-group-text">IGN</div>
-                                <input type="text" class="form-control" id="player6IGN" placeholder="Enter IGN" required>
+                                <input type="text" class="form-control" id="player6IGN" placeholder="Enter IGN"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-3 text-center mt-3">
@@ -199,7 +206,8 @@
                             <label class="visually-hidden" for="player7IGN">Username</label>
                             <div class="input-group">
                                 <div class="input-group-text">IGN</div>
-                                <input type="text" class="form-control" id="player7IGN" placeholder="Enter IGN" required>
+                                <input type="text" class="form-control" id="player7IGN" placeholder="Enter IGN"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-3 text-center mt-3">
@@ -278,6 +286,14 @@
                 popupOverlay.style.display = "none";
                 location.reload();
             }, 2000);
+        });
+    </script>
+    <script>
+        // Redirect to index.html when Sign Out button is clicked
+        const signOutButton = document.getElementById('signOut');
+
+        signOutButton.addEventListener('click', () => {
+            window.location.href = 'index.html';
         });
     </script>
 </body>

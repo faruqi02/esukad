@@ -279,7 +279,7 @@ html {
 }
 
 .tranding-slider-control .slider-arrow {
-    background: var(--white);
+    background-color: #F4841E;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -290,7 +290,7 @@ html {
 
 .tranding-slider-control .slider-arrow ion-icon {
     font-size: 2rem;
-    color: #222224;
+    color: #ffffff;
 }
 
 .tranding-slider-control .slider-arrow::after {
@@ -393,7 +393,7 @@ html {
   .futuristic-input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border-radius: 5px;
     background-color: #ffffff;
     color: #000000;

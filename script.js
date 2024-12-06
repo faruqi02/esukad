@@ -52,10 +52,14 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
   // Validate credentials
   if (email === 'manager1@gmail.com' && password === '00000') {
-    // Redirect to registerTeam.html
+    
     window.location.href = 'registerTeam.html';
+
+  } else if (email === 'admin@gmail.com' && password === '00000'){
+    // Redirect to registerTeam.html
+    window.location.href = 'dashboard/index.html';
   } else {
-    // Show an error message
+    // Show an error message// Redirect to registerTeam.html
     alert('Invalid email or password. Please try again.');
   }
 });

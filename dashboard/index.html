@@ -286,25 +286,26 @@
             <ul class="nav flex-column">
 
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#" data-target = "dashboardCanvas">
+                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#"
+                  data-target="homeDashboard">
                   <svg class="bi">
                     <use xlink:href="#house-fill" />
-                  </svg>
-                  Dashboard
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 " href="#" data-target = "homeCanvas">
-                  <svg class="bi">
-                    <use xlink:href="#file-earmark" />
                   </svg>
                   Home
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#" data-target = "announcement">
+                <a class="nav-link d-flex align-items-center gap-2 " href="#" data-target="userlistDashboard">
+                  <svg class="bi">
+                    <use xlink:href="#file-earmark" />
+                  </svg>
+                  User List
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="annoucementDashboard">
                   <svg class="bi">
                     <use xlink:href="#calendar3" />
                   </svg>
@@ -313,7 +314,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#" data-target = "announcement">
+                <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="gameScheduleDashboard">
                   <svg class="bi">
                     <use xlink:href="#people" />
                   </svg>
@@ -322,7 +323,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#" data-target = "leaderboard">
+                <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="leaderboardDashboard">
                   <svg class="bi">
                     <use xlink:href="#graph-up" />
                   </svg>
@@ -331,7 +332,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#" data-target = "matchResult">
+                <a class="nav-link d-flex align-items-center gap-2" href="#" data-target="matchResultDashboard">
                   <svg class="bi">
                     <use xlink:href="#puzzle" />
                   </svg>
@@ -346,7 +347,8 @@
             <ul class="nav flex-column mb-auto">
 
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="https://www.google.com" onclick="window.location.href='../index.html';">
+                <a class="nav-link d-flex align-items-center gap-2" href="https://www.google.com"
+                  onclick="window.location.href='../index.html';">
                   <svg class="bi">
                     <use xlink:href="#door-closed" />
                   </svg>
@@ -364,16 +366,51 @@
           <h1 class="h2">Dashboard</h1>
         </div>
 
-        <canvas class="my-4 w-100" id="dashboardCanvas" width="900" height="380"></canvas>
-        <canvas class="my-4 w-100" id="homeCanvas" width="900" height="380"></canvas>
-        <canvas class="my-4 w-100" id="leaderboard" width="900" height="380"></canvas>
-        <canvas class="my-4 w-100" id="matchResult" width="900" height="380"></canvas>
-        <canvas class="my-4 w-100" id="announcement" width="900" height="380"></canvas>
 
-        <div id="tableContainer" style="display: none;">
-          <table id="csvTable" border="1" style="width: 100%; border-collapse: collapse;"></table>
+        <div id="leaderboardDashboard"class="my-4 w-100" style="width: 900px; height: 700px; display: none ;">
+          <table id="leaderboardTable" border="1" style="width: 100%; border-collapse: collapse;"></table>
         </div>
+
+        <div id="homeDashboard" class="my-4 w-100" style="width: 900px; height: 700px;  display: none ;"></div>
+
+        <div id ="userlistDashboard" class="my-4 w-100" style="width: 900px; height: 700px;  display: none;">
+          <table id="userlistTable" border="1" style="width: 100%; border-collapse: collapse;"></table>
+        </div>
+
+        <div id="annoucementDashboard" class="my-4 w-100" style="width: 900px; height: 700px;  display: none;">
+          <section id="contact" class="section">
+            <div class="contact-container">
+              <h2 style="justify-content: center;">Update Annoucement Here</h2>
+              <form action="#" method="post" class="contact-form">
+                <div class="mb-3">
+                  <textarea name="message" class="form-control" rows="4" placeholder="Annoucement Text" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Annoucement</button>
+              </form>
+            </div>
+          </section>
+        </div>
+
+        <div id="matchResultDashboard" class="my-4 w-100" style="width: 900px; height: 700px;  display: none;">
+          <table id="matchResultTable" border="1" style="width: 100%; border-collapse: collapse;"></table>            
+        </div>
+
+        <div id="gameScheduleDashboard" class="my-4 w-100" style="width: 900px; height: 700px; display: none;">
+          <table id="gameScheduleTable" border="1" style="width: 100%; border-collapse: collapse;"></table>         
+        </div>
+
+        <!--<canvas class="my-4 w-100" id="dashboardCanvas" width="900" height="380" style="border: 5px solid red;"></canvas>
+        <canvas class="my-4 w-100" id="homeCanvas" width="900" height="380" style="border: 5px solid green;"></canvas>
+        <canvas class="my-4 w-100" id="leaderboard" width="900" height="380" style="border: 5px solid blue;"></canvas>
+        <canvas class="my-4 w-100" id="matchResult" width="900" height="380" style="border: 5px solid violet;"></canvas>
+        <canvas class="my-4 w-100" id="announcement" width="900" height="380"
+          style="border: 5px solid yellow;"></canvas><div id="tableContainer" style="display: none;">
+
+        </div>-->
+
         
+
+
       </main>
     </div>
   </div>

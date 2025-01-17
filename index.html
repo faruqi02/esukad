@@ -56,7 +56,7 @@
       console.log("Login successful:", user.email);
       alert("Login successful!");
       if (user.email.endsWith("@admin.com")) {
-        window.location.href = "admin.html";
+        window.location.href = "dashboard/index.html";
       } else if (user.email.endsWith("@manager.com")) {
         window.location.href = "registerTeam.html";
       } else {

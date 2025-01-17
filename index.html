@@ -20,7 +20,67 @@
 <!-- Firebase Firestore SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js"></script>
 
+<!-- Firebase SDKs -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
+  // Firebase Config
+  const firebaseConfig = {
+    apiKey: "AIzaSyDWqjicwBSPF9K41D2RqJGcW90Ud_wwEH0",
+    authDomain: "e-sukad.firebaseapp.com",
+    projectId: "e-sukad",
+    storageBucket: "e-sukad.firebasestorage.app",
+    messagingSenderId: "335112000589",
+    appId: "1:335112000589:web:71217fe2c2be5d2f8f7804",
+    measurementId: "G-J83H5X73F0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Login Function with Session Tracking
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault(); // Prevent form submission
+    const email = document.getElementById("emailInput").value;
+    const password = document.getElementById("passwordInput").value;
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Store the token in a cookie for session tracking
+      const token = await user.getIdToken();
+      document.cookie = `authToken=${token}; path=/; secure; httponly`;
+      console.log("Login successful:", user.email);
+      alert("Login successful!");
+      if (user.email.endsWith("@admin.com")) {
+        window.location.href = "admin.html";
+      } else if (user.email.endsWith("@manager.com")) {
+        window.location.href = "registerTeam.html";
+      } else {
+        alert("Unauthorized email domain!");
+      }
+    } catch (error) {
+      console.error("Login failed:", error.message);
+      alert("Login failed: " + error.message);
+    }
+  });
+
+  // Logout Functionality
+  document.getElementById("logoutButton")?.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+      document.cookie = "authToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC"; // Clear cookie
+      alert("Logged out successfully!");
+      window.location.href = "index.html"; // Redirect to login page
+    } catch (error) {
+      console.error("Logout failed:", error.message);
+      alert("Logout failed: " + error.message);
+    }
+  });
+</script>
 <!--Navbar-->
 
 <body>
@@ -88,14 +148,15 @@
           <!-- Slide-start -->
           <div class="swiper-slide tranding-slide">
             <!-- <a href="leaderboard.html"> -->
-              <div class="tranding-slide-img">
-                <img src="img/pubggame.png" alt="Tranding">
-              </div>
+            <div class="tranding-slide-img">
+              <img src="img/pubggame.png" alt="Tranding">
+            </div>
             <!-- </a> -->
             <div class="tranding-slide-content">
               <div class="tranding-slide-content-bottom">
                 <h2 class="food-name"> PUBG Mobile </h2>
-                <button class="leaderboard-button" onclick="location.href='leaderboard.html?game=PUBG'">View game</button>
+                <button class="leaderboard-button" onclick="location.href='leaderboard.html?game=PUBG'">View
+                  game</button>
               </div>
             </div>
           </div>
@@ -108,7 +169,8 @@
             <div class="tranding-slide-content">
               <div class="tranding-slide-content-bottom">
                 <h2 class="food-name"> Valorant </h2>
-                <button class="leaderboard-button" onclick="location.href='leaderboard.html?game=Valorant'">View game</button>
+                <button class="leaderboard-button" onclick="location.href='leaderboard.html?game=Valorant'">View
+                  game</button>
               </div>
             </div>
           </div>
@@ -193,6 +255,6 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 
-  </body>
+</body>
 
 </html>

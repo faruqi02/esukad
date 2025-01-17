@@ -9,189 +9,163 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="style.css">
+        <script type="module" src="leaderboard.js"></script>
       </head>
 <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-        <a class="navbar-brand me-auto" href="#">
-            <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52">
-        </a>
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">e-Sukad</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Games</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-                </li>
-            </div>
+    <div id="home-section" class="home-section">
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+    <a class="navbar-brand me-auto" href="index.html">
+        <img src="img/logoesukad.PNG" alt="Bootstrap" width="77" height="52">
+    </a>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">e-Sukad</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <!-- <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="leaderboard.html?game=ML">Mobile Legends</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="leaderboard.html?game=PUBG">PUBG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="leaderboard.html?game=Valorant">Valorant</a>
+            </li> -->
         </div>
-    </nav>
-    <!--End Navbar-->
-        <div class="container">
-            <div class="row mt-2">
-                <div class="col-md-5">
-                    <div class="card-body text-center"><div class="dashboard-header">LEADERBOARD</div>
-                        <ul class="list-group">
-                            <!-- <div class="leaderboard border-0 my-2 rounded">
-                                <ul class="list-group list-group-horizontal justify-content-center">
-                                    <li class="star list-group-item border-0">1</li>
-                                    <li class="list-group-item mx-auto border-0">aman damai</li>
-                                    <li class="list-group-item border-0">882</li>
-                                </ul>
-                            </div> -->
-                            <div class="row">
-                                <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
-                                    <div class="star-icon col-1">
-                                        <div class="star-text">1st</div>
-                                    </div>
-                                </div>
-                                <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
-                                    <!-- <ul class="list-group list-group-horizontal justify-content-center">
-                                        <li class="list-group-item border-0">4</li>
-                                        <li class="list-group-item mx-auto border-0">tekun</li>
-                                        <li class="list-group-item border-0">882</li>
-                                    </ul> -->
-                                
-                                    <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
-                                        <div class="team-name mx-auto">indah kembara gemilang</div>
-                                        <div class="team-score">7000</div>
-                                    </div>
+    </div>
+    </div>
+</nav>
+<!--End Navbar-->
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-md-5">
+                <div class="card-body text-center"><div id="leaderboard" class="dashboard-header">LEADERBOARD</div>
+                    <ul class="list-group">
+                        <!-- <div class="row">
+                            <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
+                                <div class="star-icon col-1">
+                                    <div class="star-text">1st</div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
-                                    <div class="star-icon col-1">
-                                        <div class="star-text">2rd</div>
-                                    </div>
-                                </div>
-                                <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
-                                    <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
-                                        <div class="team-name mx-auto">indah kembara</div>
-                                        <div class="team-score">7000</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
-                                    <div class="star-icon col-1">
-                                        <div class="star-text">3rd</div>
-                                    </div>
-                                </div>
-                                <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
-                                    <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
-                                        <div class="team-name mx-auto">indah kembara</div>
-                                        <div class="team-score">7000</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
-                                    <span class="rank-text">4</span>
-                                </div>
-                                <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
-                                    <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
-                                        <div class="team-name mx-auto">indah kembara</div>
-                                        <div class="team-score">7000</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-7">
-                    <div class="card-body text-center"><div class="dashboard-header">UPCOMING MATCH</div>
-                        <div class="match-box list-group list-group-horizontal justify-content-center my-2">
-                            <!-- <li class="list-group-item border-0">restu</li>
-                            <li class="list-group-item border-0">vs</li>
-                            <li class="list-group-item border-0">tekun</li> -->
-                            <div class="row match-text">
-                                <div class="col">restu</div>
-                                <div class="col vs-container">
-                                    <span class="vs-text">vs</span>
-                                </div>
-                                <div class="col">tekun</div>
-                            </div>
+                            <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
                             
+                                <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
+                                    <div class="team-name mx-auto">desa tekun</div>
+                                    <div class="team-score">7900</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="time-text">20:30 | Tuesday</div>
-                        <div class="date-text">-- 15 Dec 2025 --</div>
+                        <div class="row">
+                            <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
+                                <div class="star-icon col-1">
+                                    <div class="star-text">2rd</div>
+                                </div>
+                            </div>
+                            <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
+                                <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
+                                    <div class="team-name mx-auto">desa dekan</div>
+                                    <div class="team-score">5007</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
+                                <div class="star-icon col-1">
+                                    <div class="star-text">3rd</div>
+                                </div>
+                            </div>
+                            <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
+                                <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
+                                    <div class="team-name mx-auto">harapan fajar</div>
+                                    <div class="team-score">2040</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
+                                <span class="rank-text">4</span>
+                            </div>
+                            <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
+                                <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
+                                    <div class="team-name mx-auto">cahaya kera</div>
+                                    <div class="team-score">1000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 rank-circle d-flex justify-content-center align-items-center">
+                                <span class="rank-text">5</span>
+                            </div>
+                            <div class="col leaderboard-item d-flex align-items-center border-0 my-2 rounded me-3">
+                                <div class="d-flex flex-grow-1 justify-content-center align-items-center px-3">
+                                    <div class="team-name mx-auto">restu cahaya</div>
+                                    <div class="team-score">500</div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="card-body text-center"><div class="dashboard-header">UPCOMING MATCH</div>
+                    <div class="match-box list-group list-group-horizontal justify-content-center my-2">
+                        <!-- <div class="row match-text">
+                            <div class="col">restu</div>
+                            <div class="col vs-container">
+                                <span class="vs-text">vs</span>
+                            </div>
+                            <div class="col">tekun</div>
+                        </div> -->
+                        
                     </div>
-                    <div class="card-body text-center my-3"><div class="dashboard-header">HISTORY</div>
-                        <ul class="list-group">
-                            <div class="history border-0 rounded my-2">
-                                <!-- <div class="row border rounded"> -->
-                                    <!-- <ul class="list-group list-group-horizontal justify-content-center my-1">
-                                        <li class="list-group-item border-0 mx-auto">aman damai</li>
-                                        <li class="list-group-item border-0">vs</li>
-                                        <li class="list-group-item border-top-0 border-bottom-0 col-3">tekun</li>
-                                        <li class="list-group-item border-top-0 border-bottom-0 col-3">aman</li>
-                                        <li class="list-group-item border-end-0 border-top-0 border-bottom-0">+200</li>
-                                    </ul> -->
-                                <!-- </div> -->
-                                <!-- <div class="row match-text">
-                                    <div class="col">restu</div>
-                                    <div class="col-1 vs-text">vs</div>
-                                    <div class="col">tekun</div>
-                                    <img src="img\blackline-removebg.png" alt="" class="col gx-0" style="height: 60px; max-width: 60px;">
-                                    <div class="col gx-0">tekun</div>
-                                    <img src="img\blackline-removebg.png" alt="" class="col gx-0" style="height: 60px; max-width: 60px;">
-                                    <div class="col history-score gx-0">+250</div>
-                                </div> -->
+                    <div class="time-text"></div>
+                    <div class="date-text"></div>
+                </div>
+                <div class="card-body text-center my-3"><div class="dashboard-header">HISTORY</div>
+                    <ul id="history" class="list-group">
+                        <!-- <div class="history border-0 rounded my-2">
+                            <ul class="list-group list-group-horizontal justify-content-center my-1">
+                                <li class="list-group-item history-text border-0 col-md-3">aman damai</li>
+                                <li class="list-group-item vs-text border-0 vs-text mx-auto">vs</li>
+                                <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-3">cahaya gemilang</li>
+                                <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">aman damai</li>
+                                <li class="list-group-item history-score border-end-0 border-top-0 border-bottom-0 col-md-2">+200</li>
+                            </ul>
+                        </div>
+                        <div class="history border-0 rounded my-2">
                                 <ul class="list-group list-group-horizontal justify-content-center my-1">
-                                    <li class="list-group-item history-text border-0 col-md-3">aman damai</li>
+                                    <li class="list-group-item history-text border-0 col-md-3">restu cahaya</li>
                                     <li class="list-group-item vs-text border-0 vs-text mx-auto">vs</li>
                                     <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-3">cahaya gemilang</li>
-                                    <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">aman damai</li>
-                                    <li class="list-group-item history-score border-end-0 border-top-0 border-bottom-0 col-md-2">+200</li>
+                                    <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">restu cahaya</li>
+                                    <li class="list-group-item history-score border-end-0 border-top-0 border-bottom-0 col-md-2">+400</li>
                                 </ul>
-                            </div>
-                            <div class="history border-0 rounded my-2">
-                                <!-- <div class="row border rounded"> -->
-                                    <ul class="list-group list-group-horizontal justify-content-center my-1">
-                                        <li class="list-group-item history-text border-0 col-md-3">restu cahaya</li>
-                                        <li class="list-group-item vs-text border-0 vs-text mx-auto">vs</li>
-                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-3">cahaya gemilang</li>
-                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">restu cahaya</li>
-                                        <li class="list-group-item history-score border-end-0 border-top-0 border-bottom-0 col-md-2">+400</li>
-                                    </ul>
-                                <!-- </div> -->
-                                <!-- <div class="row match-text">
-                                    <div class="col">cahaya gemilang harapan</div>
-                                    <div class="col-1 vs-text">vs</div>
-                                    <div class="col">restu</div>
-                                    <img src="img\blackline-removebg.png" alt="" class="col gx-0" style="height: 60px; max-width: 60px;">
-                                    <div class="col gx-0">cahaya gemilang harapan</div>
-                                    <img src="img\blackline-removebg.png" alt="" class="col gx-0" style="height: 60px; max-width: 60px;">
-                                    <div class="col history-score gx-0">+250</div>
-                                </div> -->
-                            </div>
-                            <div class="history border-0 rounded my-2">
-                                    <ul class="list-group list-group-horizontal justify-content-center my-1">
-                                        <li class="list-group-item history-text border-0 col-md-3 ">restu cahaya</li>
-                                        <li class="list-group-item vs-text border-0 vs-text mx-auto">vs</li>
-                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-3">tekun gemilang</li>
-                                        <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">restu cahaya</li>
-                                        <li class="list-group-item history-score border-end-0 border-top-0 border-bottom-0 col-md-2">+400</li>
-                                    </ul>
-                            </div>
-                        </ul>
-                    </div>
+                        </div>
+                        <div class="history border-0 rounded my-2">
+                                <ul class="list-group list-group-horizontal justify-content-center my-1">
+                                    <li class="list-group-item history-text border-0 col-md-3 ">restu cahaya</li>
+                                    <li class="list-group-item vs-text border-0 vs-text mx-auto">vs</li>
+                                    <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-3">tekun gemilang</li>
+                                    <li class="list-group-item history-text border-top-0 border-bottom-0 col-md-2">restu cahaya</li>
+                                    <li class="list-group-item history-score border-end-0 border-top-0 border-bottom-0 col-md-2">+400</li>
+                                </ul>
+                        </div> -->
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    
     
     <!-- fetch navbar -->
     <!-- <script>

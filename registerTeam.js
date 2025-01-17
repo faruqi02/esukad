@@ -26,29 +26,35 @@ const db = getFirestore(app);
 document.getElementById('submitButton').addEventListener('click', async () => {
   const team = [];
 
+  const teamName = document.getElementById('teamNameSelection').value;
+
   for (let i = 1; i <= 7; i++) {
     const name = document.getElementById('player'+ i +'Name').value.trim();
     const ign = document.getElementById('player'+ i +'IGN').value.trim();
     const role = document.getElementById('player'+ i +'Role').value;
-
-    if (!name || !ign || !role) {
+    
+    if (!name || !ign || !role || !teamName) {
     // alert(`Please fill out all fields for player ${i}.`);
     return;
     }
                 
   // if (name && ign && role) {
-    team.push({name, ign, role});
+    team.push({name, ign, role, teamName});
   // }
   }
 
   const game = document.getElementById('gameSelection').value;
-
+  
   // if (game.length > 0 && game) {
   async function submitTeam (team, game) {
     try {
       await addDoc(collection(db, 'teams'), {
+        teamName,
         teamMembers: team,
         game,
+        isWin: true,
+        hadMatch: false,
+        score: 0,
         dateRegistered: serverTimestamp()
       });
       // alert('Team submitted succesfully');

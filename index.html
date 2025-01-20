@@ -40,7 +40,7 @@
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-  // Securely handle login
+  // Login Function with Session Tracking
   document.getElementById("loginForm").addEventListener("submit", async (e) => {
     e.preventDefault(); // Prevent form submission
     const email = document.getElementById("emailInput").value;
@@ -50,20 +50,17 @@
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Store token securely in sessionStorage
+      // Store the token in a cookie for session tracking
       const token = await user.getIdToken();
-      sessionStorage.setItem("authToken", token);
+      document.cookie = `authToken=${token}; path=/; secure; httponly`;
       console.log("Login successful:", user.email);
       alert("Login successful!");
-
-      // Redirect based on email domain
       if (user.email.endsWith("@admin.com")) {
         window.location.href = "dashboard/index.html";
       } else if (user.email.endsWith("@manager.com")) {
         window.location.href = "registerTeam.html";
       } else {
         alert("Unauthorized email domain!");
-        await signOut(auth); // Sign out if unauthorized
       }
     } catch (error) {
       console.error("Login failed:", error.message);
@@ -71,26 +68,16 @@
     }
   });
 
-  // Securely handle logout
+  // Logout Functionality
   document.getElementById("logoutButton")?.addEventListener("click", async () => {
     try {
       await signOut(auth);
-      sessionStorage.removeItem("authToken"); // Clear session storage
+      document.cookie = "authToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC"; // Clear cookie
       alert("Logged out successfully!");
       window.location.href = "index.html"; // Redirect to login page
     } catch (error) {
       console.error("Logout failed:", error.message);
       alert("Logout failed: " + error.message);
-    }
-  });
-
-  // Optional: Check authentication state and redirect unauthorized users
-  onAuthStateChanged(auth, (user) => {
-    if (!user) {
-      sessionStorage.removeItem("authToken"); // Ensure session is cleared
-      if (window.location.pathname !== "/index.html") {
-        window.location.href = "index.html"; // Redirect to login if unauthorized
-      }
     }
   });
 </script>

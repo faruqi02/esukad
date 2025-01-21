@@ -769,6 +769,7 @@ html {
 
 .vs-container {
     display: flex;
+    justify-content: center;
     position: relative;
     width: 70px;
     height: 60px;

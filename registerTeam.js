@@ -3,6 +3,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
 import { getFirestore, collection, serverTimestamp, addDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,8 +21,35 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Auth
+const auth = getAuth(app);
+
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loading = document.getElementById('loading');
+  const content = document.getElementById('home-section');
+
+  loading.style.display = 'block';
+  content.style.display = 'none';
+
+  window.addEventListener('load', () => {
+    onAuthStateChanged(auth, (user) => {
+      if (!user || !user.email.endsWith("@manager.com")) {
+          alert("Access denied: Only managers can access this page.");
+          window.location.href = "index.html"; 
+        // }
+      } else {
+        loading.style.display = 'none';
+        content.style.display = 'block';
+      }
+    });
+  })
+})
+
+console.log(document.cookie);
 
 document.getElementById('submitButton').addEventListener('click', async () => {
   const team = [];
@@ -66,3 +94,18 @@ document.getElementById('submitButton').addEventListener('click', async () => {
 
   await submitTeam(team, game);
 })
+
+// Redirect to index.html when Sign Out button is clicked
+const signOutButton = document.getElementById('signOut');
+
+signOutButton.addEventListener('click', async () => {
+    try {
+        await signOut(auth);
+            document.cookie = "authToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC"; // Clear cookie
+            alert("Logged out successfully!");
+            window.location.href = "index.html"; // Redirect to login page
+        } catch (error) {
+            console.error("Logout failed:", error.message);
+            alert("Logout failed: " + error.message);
+        }
+});

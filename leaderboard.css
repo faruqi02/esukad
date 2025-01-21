@@ -208,6 +208,7 @@
     /* top: 419px; */
     
     /* display: flex; */
+    position: relative;
     font-family: 'Post No Bills Colombo';
     font-style: normal;
     font-weight: 700;
@@ -232,11 +233,13 @@
 .vs-container {
     display: flex;
     position: relative; 
+    justify-content: center;
     width: 70px; 
     height: 60px; 
     align-items: center;
     background: url('img/lightningsymbol-removebg.png') no-repeat center center; 
     background-size: contain; 
+    border: 3px solid red;
 }
 
 

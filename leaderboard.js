@@ -55,7 +55,10 @@ fetchHistory(selectedGame);
 
 async function fetchTeams (gameName) {
     const teams = collection(db, 'teams');
-    const q = query(teams, where("game", "==", gameName));
+    const q = query(
+      teams, 
+      where("game", "==", gameName),
+      orderBy("score", "desc"));
     const snapshot = await getDocs(q);
     const leaderboard = [];
 

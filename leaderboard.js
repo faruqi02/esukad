@@ -4,7 +4,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
-import { getFirestore, collection,  getDocs, query, where } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+import { getFirestore, collection,  getDocs, query, where, orderBy, limit } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -96,9 +96,13 @@ async function fetchTeams (gameName) {
 
 async function fetchUpcomingMatch(gameName) {
     const match = collection(db, 'match');
-    const q = query(match, where("game", "==", gameName));
+    const q = query(
+      match, 
+      where("game", "==", gameName),
+      orderBy("dateRegistered", "desc"),
+      limit(1));
     const snapshot = await getDocs(q);
-    const matchData = snapshot.docs[0].data();
+    const matchData = snapshot.docs[0]?.data();
 
     const matchContainer = document.querySelector('.match-box');
     const timeContainer = document.querySelector('.time-text');
@@ -120,7 +124,10 @@ async function fetchUpcomingMatch(gameName) {
 
 async function fetchHistory(gameName) {
     const history = collection(db, 'history');
-    const q = query(history, where("game", "==", gameName));
+    const q = query(
+      history, 
+      where("game", "==", gameName),
+      orderBy("dateRegistered", "desc"));
     const snapshot = await getDocs(q);
     const historyData = [];
 

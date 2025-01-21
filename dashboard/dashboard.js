@@ -1,3 +1,8 @@
+//FIREBASE PART
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Select all navigation links and canvases
   const navLinks = document.querySelectorAll(".nav-link");
